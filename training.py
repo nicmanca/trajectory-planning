@@ -66,7 +66,7 @@ def make_env():
     
     env = GrayscaleObservation(env, keep_dim=True)
     env = RandomStartWrapper(env)
-    env = ClipReward(env, max_reward=2.0)
+    env = ClipReward(env, max_reward=2.0) 
     env = OffTrackPenaltyWrapper(env, penalty=0.02)
     
     return env
